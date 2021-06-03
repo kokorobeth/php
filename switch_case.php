@@ -1,5 +1,5 @@
 <?php 
-$number = 5;
+$number = 4;
 
 switch($number) {
     case 1: 
