@@ -3,24 +3,23 @@
         $bil1 = $_POST['bil1'];
         $bil2 = $_POST['bil2'];
         $operasi = $_POST['operasi'];
-        switch($operasi) {
-            case 'tambah' :
-                $hasil = $bil1 + $bil2;
-            break;
 
-            case 'kurang' : 
+        switch($operasi) {
+            case 'tambah' :  
                 $hasil = $bil1 + $bil2;
             break;
-            case 'kali' : 
-                $hasil = $bil1 + $bil2;
+            case 'kurang' :  
+                $hasil = $bil1 - $bil2;
+            break;
+            case 'kali' :  
+                $hasil = $bil1 * $bil2;
             break;
             case 'bagi' :  
-                $hasil = $bil1 + $bil2;
+                $hasil = $bil1 / $bil2;
             break;
         }
     }
 ?>
-
 
 <form action="index2.php" method="post">
     <input type="text" name="bil1" autocomplete="off">
@@ -31,10 +30,10 @@
         <option value="kali">*</option>
         <option value="bagi">/</option>
     </select>
-    <input type="submit" name="hitung" value="hitung">
+    <button type="submit" name="hitung">Hitung</button>
     <?php if(isset($_POST['hitung'])): ?>
-    <input type="text" name="hasil" value="<?php echo $hasil ?>">
+    <input type="text" name="hitung" value="<?php echo $hasil ?>">
     <?php else : ?>
-    <input type="text" name="hasil" value="0">
+    <input type="text" name="hitung" value="0">
     <?php endif ?>
 </form>
