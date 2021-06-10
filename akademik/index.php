@@ -1,41 +1,41 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<title>Membuat Login</title>
+	<title>Form Login</title>
 </head>
 <body>
 	<h2>Form Login</h2>
 	<br/>
-	<!-- cek pesan notifikasi -->
+	<br/>
 	<?php 
-	if(isset($_GET['pesan'])){
-		if($_GET['pesan'] == "gagal"){
-			echo "Login gagal! username dan password salah!";
-		}else if($_GET['pesan'] == "logout"){
-			echo "Anda telah berhasil logout";
-		}else if($_GET['pesan'] == "belum_login"){
-			echo "Anda harus login untuk mengakses halaman admin";
+		if(isset($_GET['pesan'])) {
+			if($_GET['pesan'] == "gagal") {
+				echo "Failed, check your username & password";
+			}elseif($_GET['pesan'] == "logout") {
+				echo "You've been logged out";
+			}elseif($_GET['pesan'] == "belum_login") {
+				echo "Anda harus login dahulu untuk akses halaman admin";
+			}
 		}
-	}
 	?>
-	<form method="post" action="cek_login.php">
+
+	<form action="cek_login" method="post">
 		<table>
 			<tr>
 				<td>Username</td>
 				<td>:</td>
-				<td><input type="text" name="username" placeholder="Masukkan username"></td>
+				<td>
+					<input type="text" name="username" placeholder="Masukan Username" autocomplete="off">
+				</td>
 			</tr>
 			<tr>
 				<td>Password</td>
 				<td>:</td>
-				<td><input type="password" name="password" placeholder="Masukkan password"></td>
+				<td>
+					<input type="text" name="password" placeholder="Masukan Password" autocomplete="off">
+				</td>
 			</tr>
-			<tr>
-				<td></td>
-				<td></td>
-				<td><input type="submit" value="LOGIN"></td>
-			</tr>
-		</table>			
+		</table>
 	</form>
 </body>
 </html>
