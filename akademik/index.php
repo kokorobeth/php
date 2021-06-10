@@ -1,45 +1,41 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>CRUD PHP dan Mysqli</title>
+	<title>Membuat Login</title>
 </head>
 <body>
-    <h2>Latihan CRUD Mahasiswa</h2>
-
-    <a href="tambah.php">+ Tambah data mahasiswa</a>
-    <br>
-    <br>
-    <table border="1" cellspacing="0" cellpadding="0">
-        <tr>
-            <th>No.</th>
-            <th>Nama</th>
-            <th>NIM</th>
-            <th>Alamat</th>
-            <th>Action</th>
-        </tr>
-
-        <?php 
-            include 'koneksi.php';
-
-            $no = 1;
-            $data = mysqli_query($koneksi, "select * from mahasiswa");
-            while($mhs = mysqli_fetch_array($data)) {
-            ?>
-                <tr>
-                    <td><?= $no++; ?></td>
-                    <td><?= $mhs['nama']; ?></td>
-                    <td><?= $mhs['nim']; ?></td>
-                    <td><?= $mhs['alamat']; ?></td>
-                    <td>
-                        <a href="edit.php?id=<?= $mhs['id'] ?>">Edit</a>
-                        <a href="hapus.php?id=<?= $mhs['id'] ?>">Hapus</a>
-                    </td>
-                </tr>
-                <<?php
-                 }
-                 ?>
-            
-        
-    </table>
+	<h2>Form Login</h2>
+	<br/>
+	<!-- cek pesan notifikasi -->
+	<?php 
+	if(isset($_GET['pesan'])){
+		if($_GET['pesan'] == "gagal"){
+			echo "Login gagal! username dan password salah!";
+		}else if($_GET['pesan'] == "logout"){
+			echo "Anda telah berhasil logout";
+		}else if($_GET['pesan'] == "belum_login"){
+			echo "Anda harus login untuk mengakses halaman admin";
+		}
+	}
+	?>
+	<form method="post" action="cek_login.php">
+		<table>
+			<tr>
+				<td>Username</td>
+				<td>:</td>
+				<td><input type="text" name="username" placeholder="Masukkan username"></td>
+			</tr>
+			<tr>
+				<td>Password</td>
+				<td>:</td>
+				<td><input type="password" name="password" placeholder="Masukkan password"></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td><input type="submit" value="LOGIN"></td>
+			</tr>
+		</table>			
+	</form>
 </body>
 </html>
