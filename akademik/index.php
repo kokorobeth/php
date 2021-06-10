@@ -7,8 +7,9 @@
     <h2>Latihan CRUD Mahasiswa</h2>
 
     <a href="tambah.php">+ Tambah data mahasiswa</a>
-    </br>
-    <table border="1">
+    <br>
+    <br>
+    <table border="1" cellspacing="0" cellpadding="0">
         <tr>
             <th>No.</th>
             <th>Nama</th>
@@ -31,7 +32,7 @@
                     <td><?= $mhs['alamat']; ?></td>
                     <td>
                         <a href="edit.php?id=<?= $mhs['id'] ?>">Edit</a>
-                        <a href="hapus.php?id=<?= $mhs['id'] ?>">Edit</a>
+                        <a href="hapus.php?id=<?= $mhs['id'] ?>">Hapus</a>
                     </td>
                 </tr>
                 <<?php
