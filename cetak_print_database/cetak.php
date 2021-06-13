@@ -8,7 +8,6 @@
 	<center>
 
 		<h2>DATA LAPORAN BARANG</h2>
-		<h4>WWW.MALASNGODING.COM</h4>
 
 	</center>
 
