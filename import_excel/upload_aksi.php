@@ -1,5 +1,4 @@
 <!-- import excel ke mysql -->
-<!-- www.malasngoding.com -->
 
 <?php 
 // menghubungkan dengan koneksi
