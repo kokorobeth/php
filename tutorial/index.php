@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Kode Otomatis PHP dan MySQLi - www.malasngoding.com</title>
+	<title>Kode Otomatis PHP dan MySQLi</title>
 </head>
 <body>
 
-	<h2><a href="https://www.malasngoding.com/membuat-kode-otomatis-dengan-php-dan-mysqli">Kode Otomatis PHP dan MySQLi - www.malasngoding.com</a></h2>
+	<h2>Kode Otomatis PHP dan MySQLi</h2>
 
 	<style>
 		body{
