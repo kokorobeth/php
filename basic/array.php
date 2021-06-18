@@ -25,8 +25,8 @@ echo "<br>";
 //membuat array dengan nama buah-buahan
 $fruits = array('Watermeon', 'Mango', 'Apel', 'Banana');
 //count() menghitung isi array
-for($x=0; $x<count($fruits); $x++) {
-    echo $fruits[$x]."<br/>";
+for($x = 0; $x < count($fruits); $x++) {
+    echo $fruits[$x]. "<br/>";
 }
 echo "<br>";
 
