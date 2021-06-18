@@ -30,4 +30,16 @@ for($x = 0; $x < count($fruits); $x++) {
 }
 echo "<br>";
 
+echo "Array Assosiatif";
+echo "<br/>";
+
+$students = [
+    ["name" => "Aziz", "age" => 30, "address" => "Jakarta", "semester" => 4],
+    ["name" => "Heriyono", "age" => 34, "address" => "Surabaya", "semester" => 3],
+    ["name" => "Bambang", "age" => 40, "address" => "Cianjur", "semester" => 4],
+    ["name" => "Joko", "age" => 27, "address" => "Salatiga", "semester" => 2],
+];
+echo "<pre>";
+print_r($students);
+echo "</pre>";
 ?>
