@@ -22,7 +22,7 @@
             </tr>
 
             <?php 
-                $no =1;
+                $no = 1;
                 if(isset($_GET['tanggal'])) {
                     $tgl = $_GET['tanggal'];
                     $query = mysqli_query($koneksi, "SELECT * FROM barang_masuk WHERE tanggal = '$tgl'");
@@ -31,12 +31,13 @@
                 }
                 while($data = mysqli_fetch_array($query)) {
             ?>
-            <tr>
-                <td><?= $no++; ?></td>
-                <td><?= $data['tanggal'] ?></td>
-                <td><?= $data['nama'] ?></td>
-                <td><?= $data['jumlah'] ?></td>
-            </tr>
+                <tr>
+                    <td><?= $no++; ?></td>
+                    <td><?= $data['tanggal']; ?></td>
+                    <td><?= $data['nama']; ?></td>
+                    <td><?= $data['jumlah']; ?></td>
+                </tr>
+
             <?php } ?>
         </table>
     </center>
